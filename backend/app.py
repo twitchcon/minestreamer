@@ -21,28 +21,22 @@ key_phrase = "ok gamers"
 
 # Starts speech recognition, and returns after a single utterance is recognized. The end of a
 # single utterance is determined by listening for silence at the end or until a maximum of 15
-# seconds of audio is processed.  The task returns the recognition text as result. 
+# seconds of audio is processed.  The task returns the recognition text as result.
 # Note: Since recognize_once() returns only a single utterance, it is suitable only for single
-# shot recognition like command or query. 
+# shot recognition like command or query.
 # For long-running multi-utterance recognition, use start_continuous_recognition() instead.
 result = speech_recognizer.recognize_once()
 
+print()
 # Checks result.
 if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-    if key_phrase in result.text.lower():
-      print("Recognized: {}".format(result.text))
-    else:
-      print("You need to say ok gamers")
-      print("This is what u said: {}".format(result.text.lower().replace(',', '')))
-elif result.reason == speechsdk.ResultReason.NoMatch:
-    print("2 got called")
-    print("No speech could be recognized: {}".format(result.no_match_details))
-elif result.reason == speechsdk.ResultReason.Canceled:
-    print("3 got called")
-    cancellation_details = result.cancellation_details
-    print("Speech Recognition canceled: {}".format(cancellation_details.reason))
-    if cancellation_details.reason == speechsdk.CancellationReason.Error:
-        print("Error details: {}".format(cancellation_details.error_details))
+  print("RESPONSE:")
+  if key_phrase in result.text.lower():
+    print(result.text)
+  else:
+    print("You need to say ok gamers")
+    print("What you said: {}".format(result.text.lower().replace(',', '')))
+print()
 
 @app.route('/')
 def home():

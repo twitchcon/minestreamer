@@ -20,3 +20,7 @@ new Chart(ctx, {
     }
   }
 });
+
+document.addEventListener('keydown', (e) => {
+  console.log('Click');
+});

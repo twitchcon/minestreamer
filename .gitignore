@@ -1,0 +1,13 @@
+# General
+.DS_Store
+
+# Front-end
+# Node
+frontend/node_modules/
+
+# Parcel
+frontend/.cache/
+frontend/devserver/
+frontend/dist/
+
+# Back-end

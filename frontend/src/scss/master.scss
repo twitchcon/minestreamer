@@ -1,0 +1,25 @@
+// ==============================================
+//  Master
+// ==============================================
+
+
+// Imports ------------------------------------ /
+@import 'reset';
+
+
+// Base --------------------------------------- /
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, input {
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+
+body {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 100vh;
+}

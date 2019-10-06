@@ -1,0 +1,15 @@
+{
+  "data": {
+    "title": "Should we go left or right?",
+    "votes": [
+      7478,
+      5267,
+      556
+    ],
+    "labels": [
+      "Yes",
+      "No",
+      "Maybe"
+    ]
+  }
+}

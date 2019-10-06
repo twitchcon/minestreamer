@@ -11,5 +11,5 @@ frontend/devserver/
 frontend/dist/
 
 # Back-end
-.env
-config.py
+backend/.env
+backend/settings.py
